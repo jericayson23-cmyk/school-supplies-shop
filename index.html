@@ -1,51 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>📚 School Supplies Shop</h1>
-    <p>Your one-stop shop for school needs</p>
-</header>
+<header>🛒 School Shop</header>
+
+<!-- LOGIN / REGISTER -->
+<div class="auth" id="authBox">
+    <h2>Login / Register</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" style="display:none;">
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Cart (<span id="cart-count">0</span>)</a>
+    <span>Welcome, <b id="user"></b></span>
+    <div>
+        Cart (<span id="cart-count">0</span>)
+        <button onclick="logout()">Logout</button>
+    </div>
 </nav>
 
-<section class="products">
+<!-- ADMIN -->
+<div class="admin">
+    <h3>Add Product</h3>
+    <input id="pname" placeholder="Name">
+    <input id="pprice" type="number" placeholder="Price">
+    <input id="pimg" placeholder="Image URL">
+    <button onclick="addProduct()">Add</button>
+</div>
 
-    <div class="product">
-        <h2>Notebook</h2>
-        <p>₱50</p>
-        <button onclick="addToCart()">Add to Cart</button>
-    </div>
+<!-- PRODUCTS -->
+<div class="products"></div>
 
-    <div class="product">
-        <h2>Ballpen</h2>
-        <p>₱10</p>
-        <button onclick="addToCart()">Add to Cart</button>
-    </div>
+<!-- CART -->
+<div class="cart-box">
+    <h3>Cart</h3>
+    <ul id="cartList"></ul>
+    <h3>Total: ₱<span id="total">0</span></h3>
+    <button onclick="checkout()">Checkout</button>
+</div>
 
-    <div class="product">
-        <h2>Backpack</h2>
-        <p>₱500</p>
-        <button onclick="addToCart()">Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <h2>Calculator</h2>
-        <p>₱300</p>
-        <button onclick="addToCart()">Add to Cart</button>
-    </div>
-
-</section>
+</div>
 
 <script src="script.js"></script>
 </body>

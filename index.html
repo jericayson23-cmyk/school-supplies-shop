@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📚 School Supplies Shop</h1>
+    <p>Your one-stop shop for school needs</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Cart (<span id="cart-count">0</span>)</a>
+</nav>
+
+<section class="products">
+
+    <div class="product">
+        <h2>Notebook</h2>
+        <p>₱50</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Ballpen</h2>
+        <p>₱10</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Backpack</h2>
+        <p>₱500</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Calculator</h2>
+        <p>₱300</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
